@@ -35,7 +35,7 @@ int main()
     std::cin >> Name;
 
     Message = Prefix + "******: Nice to meet you, " + Name + ". I am Eldric.\nEldric: Have you eaten today? You are looking tired. What is your current Health?: " + Postfix;
-    TypeText(Message, 50);
+    TypeText(Message, 40);
 
     std::cin >> Health;
 
@@ -61,7 +61,7 @@ int main()
             Health += 30;
 
             Message = "[You've taken a juicy apple. It tastes very good. You are feeling better]\n";
-            TypeText(Message, 80);
+            TypeText(Message, 60);
         }
         else
         {
@@ -79,7 +79,7 @@ int main()
     }
 
     Message = "\nYour Name is: " + Name + "\nYour Health is: " + std::to_string(Health) + "\n";
-    TypeText(Message, 50);
+    TypeText(Message, 30);
 
     Message = Prefix + "\n\nEldric: Look out, " + Name + "!!!\n" + Postfix;
     TypeText(Message, 30);
@@ -100,7 +100,7 @@ int main()
         TypeText(Message, 35);
         std::cin >> ItemImpact;
 
-        if (ItemDistance < 100 && ItemDistance > 0)
+        if (ItemDistance <= 100 && ItemDistance >= 0)
         {
             float ResultImpact = ItemImpact * (1 - ItemDistance / 100);
 
@@ -122,7 +122,12 @@ int main()
             }
 
             Message = "\nYour Health is: " + std::to_string(Health) + "\nAnd the shining sphere is still there. It's moving!!!\n\n";
-            TypeText(Message, 50);
+            TypeText(Message, 30);
+        }
+        else
+        {
+            Message = "\nThe shining sphere is far from you but it is still there. And it's moving!!!\n\n";
+            TypeText(Message, 30);
         }
     }
 }
