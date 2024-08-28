@@ -25,23 +25,23 @@ int main()
     std::string Name;
     float Health;
 
-    std::string Prefix = "\x1B[93m"; //Color for dialogue replic
+    std::string Prefix = "\x1B[93m"; // Color for dialogue
     std::string Postfix = "\033[0m";
     std::string Message;
 
-    Message = "[Midnight.\nAfter 10 hours of riding you've finally rich the destination. You see an old man holding a candle lamp and lookin at you.]\n" + Prefix + "******:Welcome to the Mistvale Woods, traveler!\n******:The forest awaits your courage and curiosity!\n\nPlease, tell me your name: " + Postfix;
+    Message = "[Midnight.\nAfter 10 hours of riding you've finally reached the destination. You see an old man holding a candle lamp and looking at you.]\n" + Prefix + "******: Welcome to the Mistvale Woods, traveler!\n******: The forest awaits your courage and curiosity!\n\nPlease, tell me your name: " + Postfix;
     TypeText(Message, 50);
 
     std::cin >> Name;
 
-    Message = Prefix + "******:Nice to meet you, " + Name + ". I am Eldric.\nEldric: Have you ate today? Your are looking tired. What is your current Health?: " + Postfix;
+    Message = Prefix + "******: Nice to meet you, " + Name + ". I am Eldric.\nEldric: Have you eaten today? You are looking tired. What is your current Health?: " + Postfix;
     TypeText(Message, 50);
 
     std::cin >> Health;
 
     if (Health <= 0)
     {
-        Message = "Here is the end of you journey. RIP, " + Name + ".";
+        Message = "Here is the end of your journey. RIP, " + Name + ".";
         TypeText(Message, 120);
         return 0;
     }
@@ -74,18 +74,17 @@ int main()
     }
     else
     {
-
-        Message = Prefix + "Good, but take a rest after you trip soon\n" + Postfix;
+        Message = Prefix + "Good, but take a rest after your trip soon\n" + Postfix;
         TypeText(Message, 50);
     }
 
     Message = "\nYour Name is: " + Name + "\nYour Health is: " + std::to_string(Health) + "\n";
     TypeText(Message, 50);
 
-    Message = Prefix + "\n\nEldric: Lookout, " + Name + "!!!\n" + Postfix;
+    Message = Prefix + "\n\nEldric: Look out, " + Name + "!!!\n" + Postfix;
     TypeText(Message, 30);
 
-    Message = "\n[You've turned around and notice something in the forest. Looks like a shining sphere. It changes it's glowing color from red to blue and back.]\n";
+    Message = "\n[You've turned around and noticed something in the forest. It looks like a shining sphere. It changes its glowing color from red to blue and back.]\n";
     TypeText(Message, 35);
 
     float ItemDistance;
@@ -93,19 +92,19 @@ int main()
 
     while (Health > 0)
     {
-        Message = "What is the Distance to the sphere?: ";
+        Message = "What is the distance to the sphere?: ";
         TypeText(Message, 35);
         std::cin >> ItemDistance;
 
-        Message = "What is the Impact of the sphere?: ";
+        Message = "What is the impact of the sphere?: ";
         TypeText(Message, 35);
         std::cin >> ItemImpact;
 
         if (ItemDistance < 100 && ItemDistance > 0)
         {
-            int ResultImpact = ItemImpact * (1 - ItemDistance / 100);
+            float ResultImpact = ItemImpact * (1 - ItemDistance / 100);
 
-            Health += ItemImpact;
+            Health += ResultImpact;
 
             if (Health > 0 && Health < 1)
             {
@@ -117,7 +116,7 @@ int main()
             }
             else if (Health <= 0)
             {
-                Message = "\n\nHere is the end of you journey. RIP, " + Name + ".";
+                Message = "\n\nHere is the end of your journey. RIP, " + Name + ".";
                 TypeText(Message, 120);
                 return 0;
             }
