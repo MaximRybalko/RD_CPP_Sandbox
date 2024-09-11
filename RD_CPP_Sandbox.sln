@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RD_CPP_Sandbox", "RD_CPP_Sandbox.vcxproj", "{68E47CE8-A4E5-4C59-9027-6BCEDFAB1F3A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPP_HomeWork_2", "..\CPP_HomeWork_2\CPP_HomeWork_2.vcxproj", "{E50C1BB1-D3C9-4655-9E6B-E3CE4BC33C07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{68E47CE8-A4E5-4C59-9027-6BCEDFAB1F3A}.Release|x64.Build.0 = Release|x64
 		{68E47CE8-A4E5-4C59-9027-6BCEDFAB1F3A}.Release|x86.ActiveCfg = Release|Win32
 		{68E47CE8-A4E5-4C59-9027-6BCEDFAB1F3A}.Release|x86.Build.0 = Release|Win32
+		{E50C1BB1-D3C9-4655-9E6B-E3CE4BC33C07}.Debug|x64.ActiveCfg = Debug|x64
+		{E50C1BB1-D3C9-4655-9E6B-E3CE4BC33C07}.Debug|x64.Build.0 = Debug|x64
+		{E50C1BB1-D3C9-4655-9E6B-E3CE4BC33C07}.Debug|x86.ActiveCfg = Debug|Win32
+		{E50C1BB1-D3C9-4655-9E6B-E3CE4BC33C07}.Debug|x86.Build.0 = Debug|Win32
+		{E50C1BB1-D3C9-4655-9E6B-E3CE4BC33C07}.Release|x64.ActiveCfg = Release|x64
+		{E50C1BB1-D3C9-4655-9E6B-E3CE4BC33C07}.Release|x64.Build.0 = Release|x64
+		{E50C1BB1-D3C9-4655-9E6B-E3CE4BC33C07}.Release|x86.ActiveCfg = Release|Win32
+		{E50C1BB1-D3C9-4655-9E6B-E3CE4BC33C07}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
